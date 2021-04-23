@@ -5,8 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Temperature Converter</h1>
+  <input id="input" type="number" placeholder=""> <button id="btn" onclick="btnFunction()">Convert</button>
   
+  <h3>Celcius   : <span id="Celcius"></span></h3>
+  <h3>Farenheit : <span id="Fahrenheit"></span></h3>
+  <h3>Kelvin    : <span id="Kelvin"></span></h3>
+  <script>
+    function btnFunction(){
+      var input = document.getElementById("input").value;
+      var celcius = input;
+      var farenheit = (input*1.8) + 32;
+      var kelvin = parseInt(input) + 273.15;
+      
+      document.getElementById("Celcius").innerHTML = "";
+      document.getElementById("Celcius").innerHTML +=celcius +" Celcius";
+
+      document.getElementById("Fahrenheit").innerHTML = "";
+      document.getElementById("Fahrenheit").innerHTML +=farenheit +" fahrenheit";
+
+      
+      document.getElementById("Kelvin").innerHTML = "";
+      document.getElementById("Kelvin").innerHTML += kelvin +" Kelvin";
+    }
+  </script>
 </body>
 </html>
