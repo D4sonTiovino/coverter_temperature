@@ -14,22 +14,18 @@
   <h3>Celcius   : <span id="Celcius"></span></h3>
   <h3>Farenheit : <span id="Fahrenheit"></span></h3>
   <h3>Kelvin    : <span id="Kelvin"></span></h3>
+
   <script>
-    function btnFunction(){
-      var input = document.getElementById("input").value;
-      var celcius = input;
-      var farenheit = (input*1.8) + 32;
-      var kelvin = parseInt(input) + 273.15;
+    function btnFunction()
+    {
+      let input = document.getElementById("input").value;
+      let celcius = input;
+      let farenheit = (input*1.8) + 32;
+      let kelvin = parseInt(input) + 273.15;
       
-      document.getElementById("Celcius").innerHTML = "";
-      document.getElementById("Celcius").innerHTML +=celcius +" Celcius";
-
-      document.getElementById("Fahrenheit").innerHTML = "";
-      document.getElementById("Fahrenheit").innerHTML +=farenheit +" fahrenheit";
-
-      
-      document.getElementById("Kelvin").innerHTML = "";
-      document.getElementById("Kelvin").innerHTML += kelvin +" Kelvin";
+      document.getElementById("Celcius").innerHTML =celcius +" Celcius";
+      document.getElementById("Fahrenheit").innerHTML =farenheit +" fahrenheit";
+      document.getElementById("Kelvin").innerHTML = kelvin +" Kelvin";
     }
   </script>
 </body>
